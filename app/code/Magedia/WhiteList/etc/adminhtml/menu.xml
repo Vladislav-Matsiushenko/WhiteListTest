@@ -11,15 +11,15 @@
              title="Magedia"
              translate="title"
              module="Magedia_WhiteList"
-             sortOrder="1"
-             resource="Magedia_WhiteList::home"/>
+             sortOrder="100"
+             resource="Magento_Backend::admin"/>
         <add id="Magedia_WhiteList::whitelist"
-             title="White List"
+             title="WhiteList"
              translate="title"
              module="Magedia_WhiteList"
              sortOrder="1"
              parent="Magedia_WhiteList::home"
              action="magedia_whitelist/index/index"
-             resource="Magedia_WhiteList::whitelist"/>
+             resource="Magedia_WhiteList::home"/>
     </menu>
 </config>

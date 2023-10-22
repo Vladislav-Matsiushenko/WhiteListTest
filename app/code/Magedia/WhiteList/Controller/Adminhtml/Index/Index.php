@@ -1,6 +1,6 @@
 <?php
 
-namespace Magedia\WhiteList\Controller\Adminhtml\WhiteList;
+namespace Magedia\WhiteList\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -28,7 +28,7 @@ class Index extends Action
     {
         $resultPage = $this->pageFactory->create();
         $resultPage->setActiveMenu('Magedia_WhiteList::whitelist');
-        $resultPage->getConfig()->getTitle()->prepend(__('White List'));
+        $resultPage->getConfig()->getTitle()->prepend(__('WhiteList'));
 
         return $resultPage;
     }

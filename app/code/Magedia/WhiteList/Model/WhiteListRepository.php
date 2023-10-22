@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Magedia\Whitelist\Model;
+namespace Magedia\WhiteList\Model;
 
 use Magedia\WhiteList\Model\ResourceModel\WhiteList\Collection as WhiteListCollection;
 use Magedia\WhiteList\Model\ResourceModel\WhiteList\CollectionFactory as WhiteListCollectionFactory;
@@ -12,7 +12,6 @@ class WhiteListRepository
 {
     public const SESSION_KEY = 'WhiteList';
     public const SESSION_VALUE = 1;
-    public const WHITE_LIST_IP_DIR = '/code/Magedia/WhiteList/etc/WhiteListIP';
 
     /**
      * @var WhiteListCollectionFactory $whiteListCollectionFactory
@@ -48,5 +47,13 @@ class WhiteListRepository
             }
         }
         return false;
+    }
+
+    /**
+     * @return WhiteListCollection
+     */
+    public function getCollection(): WhiteListCollection
+    {
+        return  $this->whiteListCollectionFactory->create();
     }
 }

@@ -42,9 +42,9 @@ class Actions extends Column
     {
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
-                $name = $this->getData('ip_address');
+                $ipAddress = $this->getData('ip_address');
                 if (isset($item['id'])) {
-                    $item[$name]['view']   = [
+                    $item[$ipAddress]['view']   = [
                         'href'  => $this->_urlBuilder->getUrl($this->_viewUrl, ['id' => $item['id']]),
                         'target' => '_blank',
                         'label' => __('View on Frontend')
