@@ -7,10 +7,6 @@
         <plugin name="magedia_whitelist_renderaddtocartbutton" type="Magedia\WhiteList\Plugin\RenderAddToCartButton" />
     </type>
 
-    <type name="Magedia\WhiteList\Ui\DataProvider\WhiteList\ListingDataProvider">
-        <plugin name="magedia_whitelist_attributes" type="Magedia\WhiteList\Plugin\AddAttributesToUiDataProvider" />
-    </type>
-
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">

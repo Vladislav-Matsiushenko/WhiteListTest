@@ -48,12 +48,4 @@ class WhiteListRepository
         }
         return false;
     }
-
-    /**
-     * @return WhiteListCollection
-     */
-    public function getCollection(): WhiteListCollection
-    {
-        return  $this->whiteListCollectionFactory->create();
-    }
 }

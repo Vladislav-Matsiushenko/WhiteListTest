@@ -12,7 +12,7 @@
              translate="title"
              module="Magedia_WhiteList"
              sortOrder="100"
-             resource="Magento_Backend::admin"/>
+             resource="Magedia_WhiteList::home"/>
         <add id="Magedia_WhiteList::whitelist"
              title="WhiteList"
              translate="title"

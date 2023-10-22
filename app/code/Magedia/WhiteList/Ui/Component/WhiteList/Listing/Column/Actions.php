@@ -40,7 +40,7 @@ class Actions extends Column
      */
     public function prepareDataSource(array $dataSource)
     {
-        if (isset($dataSource['data']['items'])) {
+        /*if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
                 $ipAddress = $this->getData('ip_address');
                 if (isset($item['id'])) {
@@ -51,7 +51,7 @@ class Actions extends Column
                     ];
                 }
             }
-        }
+        }*/
 
         return $dataSource;
     }

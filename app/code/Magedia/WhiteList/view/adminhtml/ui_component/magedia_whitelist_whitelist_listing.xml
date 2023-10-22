@@ -52,7 +52,7 @@
                     <item name="config" xsi:type="array">
                         <item name="type" xsi:type="string">delete</item>
                         <item name="label" xsi:type="string" translate="true">Delete</item>
-                        <item name="url" xsi:type="url" path="dev_grid/category/massDelete" />
+                        <item name="url" xsi:type="url" path="magedia_whitelist/whitelist/massDelete" />
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Delete IP Address</item>
                             <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected IP Addresses?</item>
@@ -122,7 +122,8 @@
             </settings>
         </column>
 
-        <actionsColumn name="actions" class="Magedia\WhiteList\Ui\Component\WhiteList\Listing\Column\Actions" sortOrder="200">
+        //should be edit column
+        <actionsColumn name="actions" class="Magedia\WhiteList\Ui\Component\WhiteList\Listing\Column\Actions" sortOrder="100">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
