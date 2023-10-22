@@ -10,7 +10,7 @@
             <label>Add IP address</label>
 
             <tab>white_lst</tab>
-            <resource>Magedia_WhiteList::sub_menu</resource>
+            <resource>Magedia_WhiteList::whitelist</resource>
 
             <group id="parameters" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Parameters</label>

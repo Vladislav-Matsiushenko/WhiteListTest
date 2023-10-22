@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Magedia\WhiteList\Model;
+namespace Magedia\Whitelist\Model;
 
 use Magedia\WhiteList\Model\ResourceModel\WhiteList\Collection as WhiteListCollection;
 use Magedia\WhiteList\Model\ResourceModel\WhiteList\CollectionFactory as WhiteListCollectionFactory;

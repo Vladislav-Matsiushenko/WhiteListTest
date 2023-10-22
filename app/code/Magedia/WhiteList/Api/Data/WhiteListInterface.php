@@ -4,7 +4,7 @@ namespace Magedia\WhiteList\Api\Data;
 
 interface WhiteListInterface
 {
-    public const DB_NAME = 'white_list_ip';
+    public const DB_NAME = 'white_list';
 
     public const ID = 'id';
     public const IP_ADDRESS = 'ip_address';
