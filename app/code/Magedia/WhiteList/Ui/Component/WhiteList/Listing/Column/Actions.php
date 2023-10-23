@@ -5,53 +5,45 @@ namespace Magedia\WhiteList\Ui\Component\WhiteList\Listing\Column;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Magento\Framework\Url;
-
+use Magento\Framework\UrlInterface;
 class Actions extends Column
 {
-
-    /** @var UrlInterface */
-    protected $_urlBuilder;
-
     /**
-     * @var string
+     * @var UrlInterface $urlBuilder
      */
-    protected $_viewUrl;
+    protected $urlBuilder;
 
 
     public function __construct(
         ContextInterface $context,
         UiComponentFactory $uiComponentFactory,
-        Url $urlBuilder,
-        $viewUrl = '',
+        UrlInterface $urlBuilder,
         array $components = [],
         array $data = []
     ) {
-        $this->_urlBuilder = $urlBuilder;
-        $this->_viewUrl    = $viewUrl;
+        $this->urlBuilder = $urlBuilder;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }
 
     /**
-     * Prepare Data Source
-     *
      * @param array $dataSource
      * @return array
      */
     public function prepareDataSource(array $dataSource)
     {
-        /*if (isset($dataSource['data']['items'])) {
+        if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
-                $ipAddress = $this->getData('ip_address');
-                if (isset($item['id'])) {
-                    $item[$ipAddress]['view']   = [
-                        'href'  => $this->_urlBuilder->getUrl($this->_viewUrl, ['id' => $item['id']]),
-                        'target' => '_blank',
-                        'label' => __('View on Frontend')
-                    ];
-                }
+                $item[$this->getData('name')]['edit'] = [
+                    'href' => $this->urlBuilder->getUrl(
+                        'magedia_whitelist/index/edit',
+                        ['id' => $item['id']]
+                    ),
+                    'label' => __('Edit'),
+                    'hidden' => false,
+                    '__disableTmpl' => false
+                ];
             }
-        }*/
+        }
 
         return $dataSource;
     }

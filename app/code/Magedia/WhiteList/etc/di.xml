@@ -2,6 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Magedia\WhiteList\Api\Data\WhiteListInterface" type="Magedia\WhiteList\Model\WhiteList"/>
+    <preference for="Magedia\WhiteList\Api\WhiteListRepositoryInterface" type="Magedia\WhiteList\Model\WhiteListRepository"/>
 
     <type name="Magento\Catalog\Model\Product">
         <plugin name="magedia_whitelist_renderaddtocartbutton" type="Magedia\WhiteList\Plugin\RenderAddToCartButton" />
@@ -15,7 +16,7 @@
         </arguments>
     </type>
 
-    <virtualType name="MagediaWhiteListWhiteListCollection" type="Magedia\WhiteList\Ui\DataProvider\WhiteList\Listing\Collection">
+    <virtualType name="MagediaWhiteListWhiteListCollection" type="Magedia\WhiteList\Ui\DataProvider\WhiteList\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">white_list</argument>
             <argument name="resourceModel" xsi:type="string">Magedia\WhiteList\Model\ResourceModel\WhiteList</argument>
