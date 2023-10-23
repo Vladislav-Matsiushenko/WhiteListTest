@@ -2,28 +2,22 @@
 
 namespace Magedia\WhiteList\Block\Adminhtml\WhiteList;
 
-class Edit extends \Magento\Backend\Block\Widget\Form\Container
+use Magento\Backend\Block\Widget\Form\Container;
+use Magento\Backend\Block\Widget\Context;
+
+class Edit extends Container
 {
     /**
-     * Core registry.
-     *
-     * @var \Magento\Framework\Registry
-     */
-    protected $_coreRegistry = null;
-
-    /**
-     * @param \Magento\Backend\Block\Widget\Context $context
-     * @param \Magento\Framework\Registry $registry
+     * @param Context $context
      * @param array $data
      */
-    public function __construct(\Magento\Backend\Block\Widget\Context $context, \Magento\Framework\Registry $registry, array $data = [])
+    public function __construct(Context $context, array $data = [])
     {
-        $this->_coreRegistry = $registry;
         parent::__construct($context, $data);
     }
 
     /**
-     *
+     * @return void
      */
     protected function _construct()
     {
@@ -40,20 +34,15 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
     }
 
     /**
-     * Retrieve text for header element depending on loaded image.
-     *
      * @return \Magento\Framework\Phrase
      */
     public function getHeaderText()
     {
-        return __('Edit Review');
+        return __('Edit WhiteList');
     }
 
     /**
-     * Check permission for passed action.
-     *
      * @param string $resourceId
-     *
      * @return bool
      */
     protected function _isAllowedAction($resourceId)
@@ -62,8 +51,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
     }
 
     /**
-     * Get form action URL.
-     *
      * @return string
      */
     public function getFormActionUrl()

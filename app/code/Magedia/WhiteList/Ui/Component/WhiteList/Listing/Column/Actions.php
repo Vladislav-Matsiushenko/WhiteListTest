@@ -13,7 +13,13 @@ class Actions extends Column
      */
     protected $urlBuilder;
 
-
+    /**
+     * @param ContextInterface $context
+     * @param UiComponentFactory $uiComponentFactory
+     * @param UrlInterface $urlBuilder
+     * @param array $components
+     * @param array $data
+     */
     public function __construct(
         ContextInterface $context,
         UiComponentFactory $uiComponentFactory,

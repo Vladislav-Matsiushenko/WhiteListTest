@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Magedia\WhiteList\Setup;
 
 use Magedia\WhiteList\Api\Data\WhiteListInterface;

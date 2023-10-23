@@ -20,10 +20,12 @@ class Index extends Action
     public function __construct(Context $context, PageFactory $rawFactory)
     {
         $this->pageFactory = $rawFactory;
-
         parent::__construct($context);
     }
 
+    /**
+     * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|\Magento\Framework\View\Result\Page
+     */
     public function execute()
     {
         $resultPage = $this->pageFactory->create();

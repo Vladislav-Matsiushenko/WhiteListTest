@@ -6,6 +6,9 @@ use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
 
 class Collection extends SearchResult
 {
+    /**
+     * @return void
+     */
     protected function _initSelect()
     {
         $this->addFilterToMap('id', 'main_table.id');

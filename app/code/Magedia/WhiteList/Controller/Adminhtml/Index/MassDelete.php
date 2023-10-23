@@ -30,6 +30,7 @@ class MassDelete extends Action implements HttpPostActionInterface
 
     /**
      * @return Redirect
+     * @throws NotFoundException
      */
     public function execute(): Redirect
     {
@@ -43,8 +44,7 @@ class MassDelete extends Action implements HttpPostActionInterface
         $deleted = $this->whiteListRepository->delete($selectedIds);
 
         if ($deleted) {
-            $this->messageManager->addSuccessMessage(
-                __('A total of %1 record(s) have been deleted.', $deleted));
+            $this->messageManager->addSuccessMessage(__('A total of %1 record(s) have been deleted.', $deleted));
         }
         return $this->resultFactory->create(ResultFactory::TYPE_REDIRECT)->setPath('magedia_whitelist/index/index');
     }
